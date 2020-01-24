@@ -1,3 +1,28 @@
+
+#contactform{
+	padding: 3% 0;
+  text-align:center;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	background-color: floralwhite;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	border: 1px solid black;
+    
+}
+
+form{
+
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 // Home Content
 @import "variables";
 @import "mixins";
@@ -12,23 +37,34 @@
     p {
       padding:0 15px;
     }
-    .img-earth{
+    .contact-banner{
+      width: 100%;
       img {
+        border-radius: 5px;
         max-width: 100%;
-    max-height: 100%;
+        max-height: 100%;
+      }
+    }
+    .img-earth{
+        .center();
+      width: 100%;
+      img {
         border-radius: 5px;
       }
     }
   
   }
 
-  .space-images {
+  .contact-images {
     display: flex;
     flex-wrap: wrap;
+    .center();
     width: 100%;
-
+    .firstimg{
+        display: none;
+    }
     img {
-      width: 28%;
+      width: 30%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
@@ -82,14 +118,16 @@
     }
   }
   @media @phone{  
-      .space-images{
-        .blast{
+      .contact-images{
+        .firstimg{
           width: 100%;
+          max-height: 200px;
+          display: initial;
         }
-        .sky{
+        .scndimg{
           display:none;
         }
-        .launch{
+        .thrdimg{
           display: none;
         }
       }

@@ -1,3 +1,23 @@
+#contactform {
+  padding: 3% 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-color: floralwhite;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  border: 1px solid black;
+}
+form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .home .intro {
   margin-top: 80px;
 }
@@ -7,18 +27,33 @@
 .home .intro p {
   padding: 0 15px;
 }
-.home .intro .img-earth img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 5px;
-}
-.home .space-images {
-  display: flex;
-  flex-wrap: wrap;
+.home .intro .contact-banner {
   width: 100%;
 }
-.home .space-images img {
-  width: 28%;
+.home .intro .contact-banner img {
+  border-radius: 5px;
+  max-width: 100%;
+  max-height: 100%;
+}
+.home .intro .img-earth {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.home .intro .img-earth img {
+  border-radius: 5px;
+}
+.home .contact-images {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.home .contact-images .firstimg {
+  display: none;
+}
+.home .contact-images img {
+  width: 30%;
   margin: 20px 2.5%;
   border-radius: 20px;
   height: 100%;
@@ -76,13 +111,15 @@
   border-radius: 10px;
 }
 @media ( max-width: 500px ) {
-  .home .space-images .blast {
+  .home .contact-images .firstimg {
     width: 100%;
+    max-height: 200px;
+    display: initial;
   }
-  .home .space-images .sky {
+  .home .contact-images .scndimg {
     display: none;
   }
-  .home .space-images .launch {
+  .home .contact-images .thrdimg {
     display: none;
   }
   .home .walk {

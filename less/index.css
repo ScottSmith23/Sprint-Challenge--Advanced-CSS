@@ -205,8 +205,34 @@ p {
 }
 #navgroup a:hover {
   transition: 0.32s;
-  background-color: #faffce;
   border-radius: 20px;
+  -webkit-animation: color-change 0.2s linear infinite alternate;
+  -moz-animation: color-change 0.2s linear infinite alternate;
+  animation: color-change 0.2s linear infinite alternate;
+}
+@-moz-keyframes color-change {
+  0% {
+    background-color: #faffce;
+  }
+  100% {
+    background-color: rgba(35, 98, 235, 0.473);
+  }
+}
+@-webkit-keyframes color-change {
+  0% {
+    background-color: #faffce;
+  }
+  100% {
+    background-color: rgba(35, 98, 235, 0.473);
+  }
+}
+@keyframes color-change {
+  0% {
+    background-color: #faffce;
+  }
+  100% {
+    background-color: rgba(35, 98, 235, 0.473);
+  }
 }
 @media ( max-width: 500px ) {
   #navgroup nav {
@@ -247,10 +273,9 @@ footer {
 .home .intro p {
   padding: 0 15px;
 }
-.home .intro .img-earth {
-  width: 100%;
-}
 .home .intro .img-earth img {
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 5px;
 }
 .home .space-images {
@@ -324,6 +349,165 @@ footer {
     display: none;
   }
   .home .space-images .launch {
+    display: none;
+  }
+  .home .walk {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 60px;
+    border-top: 1px solid #dee2e6;
+    padding: 15px;
+  }
+  .home .walk .walk-text {
+    width: 100%;
+    margin-top: 3%;
+  }
+  .home .walk .walk-text .signbtn {
+    font-weight: bold;
+    display: block;
+    background-color: #22283A;
+    cursor: pointer;
+    width: 100%;
+    height: 45px;
+    font-size: 1.8rem;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .home .walk .walk-text .signbtn:hover {
+    background-color: white;
+    color: #22283A;
+  }
+  .home .walk .walk-img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+#contactform {
+  padding: 3% 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-color: floralwhite;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  border: 1px solid black;
+}
+form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home .intro {
+  margin-top: 80px;
+}
+.home .intro h2 {
+  padding: 15px;
+}
+.home .intro p {
+  padding: 0 15px;
+}
+.home .intro .contact-banner {
+  width: 100%;
+}
+.home .intro .contact-banner img {
+  border-radius: 5px;
+  max-width: 100%;
+  max-height: 100%;
+}
+.home .intro .img-earth {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.home .intro .img-earth img {
+  border-radius: 5px;
+}
+.home .contact-images {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.home .contact-images .firstimg {
+  display: none;
+}
+.home .contact-images img {
+  width: 30%;
+  margin: 20px 2.5%;
+  border-radius: 20px;
+  height: 100%;
+}
+.home .visit-planets {
+  padding: 15px;
+}
+.home .visit-planets h3 {
+  margin-top: 11px;
+}
+.home .visit-planets p {
+  margin-top: 13px;
+}
+.home .walk {
+  margin-top: 60px;
+  border-top: 1px solid #dee2e6;
+  padding: 50px 60px;
+  display: flex;
+  justify-content: center;
+}
+.home .walk .walk-text {
+  width: 50%;
+}
+.home .walk .walk-text h3 {
+  margin-bottom: 10px;
+}
+.home .walk .walk-text p {
+  margin-bottom: 26px;
+}
+.home .walk .walk-text .signbtn {
+  font-weight: bold;
+  display: block;
+  background-color: #22283A;
+  cursor: pointer;
+  width: 120px;
+  height: 45px;
+  font-size: 1.8rem;
+  font-family: 'Ubuntu', sans-serif;
+  border-radius: 10px;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.home .walk .walk-text .signbtn:hover {
+  background-color: white;
+  color: #22283A;
+}
+.home .walk .walk-img {
+  width: 46%;
+  margin-left: 4%;
+}
+.home .walk .walk-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+@media ( max-width: 500px ) {
+  .home .contact-images .firstimg {
+    width: 100%;
+    max-height: 200px;
+    display: initial;
+  }
+  .home .contact-images .scndimg {
+    display: none;
+  }
+  .home .contact-images .thrdimg {
     display: none;
   }
   .home .walk {

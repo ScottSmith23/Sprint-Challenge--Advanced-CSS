@@ -43,8 +43,34 @@
 }
 #navgroup a:hover {
   transition: 0.32s;
-  background-color: #faffce;
   border-radius: 20px;
+  -webkit-animation: color-change 0.2s linear infinite alternate;
+  -moz-animation: color-change 0.2s linear infinite alternate;
+  animation: color-change 0.2s linear infinite alternate;
+}
+@-moz-keyframes color-change {
+  0% {
+    background-color: #faffce;
+  }
+  100% {
+    background-color: rgba(35, 98, 235, 0.473);
+  }
+}
+@-webkit-keyframes color-change {
+  0% {
+    background-color: #faffce;
+  }
+  100% {
+    background-color: rgba(35, 98, 235, 0.473);
+  }
+}
+@keyframes color-change {
+  0% {
+    background-color: #faffce;
+  }
+  100% {
+    background-color: rgba(35, 98, 235, 0.473);
+  }
 }
 @media ( max-width: 500px ) {
   #navgroup nav {

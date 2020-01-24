@@ -50,8 +50,12 @@
 	font-family: 'Ubuntu', sans-serif;
 	&:hover{
 		transition: 0.32s;
-		background-color: rgb(250, 255, 206);
-		border-radius: 20px;
+    border-radius: 20px;
+    .keyframes(color-change;{
+      0% { background-color: rgb(250, 255, 206); }
+      100% { background-color: rgba(35, 98, 235, 0.473); }
+      });
+   .animation(color-change 0.2s linear infinite alternate)
 	}
 	
   }
