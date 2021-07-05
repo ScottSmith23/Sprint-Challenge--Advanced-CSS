@@ -1,0 +1,94 @@
+#navgroup {
+  background-color: rgba(246, 246, 246, 0.8);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: 0.32s;
+  width: 100%;
+}
+#navgroup nav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#navgroup nav .maintitle {
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 100%;
+  font-weight: bold;
+  font-family: 'Russo One', sans-serif;
+}
+#navgroup .links {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+}
+#navgroup a {
+  display: flex;
+  justify-content: center;
+  width: 85px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #23293B;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+#navgroup a:hover {
+  transition: 0.32s;
+  border-radius: 20px;
+  -webkit-animation: color-change 0.2s linear infinite alternate;
+  -moz-animation: color-change 0.2s linear infinite alternate;
+  animation: color-change 0.2s linear infinite alternate;
+}
+@-moz-keyframes color-change {
+  0% {
+    background-color: #faffce;
+  }
+  100% {
+    background-color: rgba(35, 98, 235, 0.473);
+  }
+}
+@-webkit-keyframes color-change {
+  0% {
+    background-color: #faffce;
+  }
+  100% {
+    background-color: rgba(35, 98, 235, 0.473);
+  }
+}
+@keyframes color-change {
+  0% {
+    background-color: #faffce;
+  }
+  100% {
+    background-color: rgba(35, 98, 235, 0.473);
+  }
+}
+@media ( max-width: 500px ) {
+  #navgroup nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  #navgroup nav .maintitle {
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  #navgroup nav .links {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
